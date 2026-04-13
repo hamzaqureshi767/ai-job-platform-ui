@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#4e545b",
+                        "on-surface": "#2a3439",
+                        "surface-dim": "#cfdce3",
+                        "on-tertiary-fixed": "#3b4248",
+                        "on-primary-container": "#005c5c",
+                        "on-secondary-fixed-variant": "#515c6f",
+                        "secondary-fixed-dim": "#cad5ec",
+                        "on-secondary-container": "#475265",
+                        "tertiary-fixed-dim": "#d2d8e0",
+                        "tertiary-container": "#e0e6ee",
+                        "error": "#9f403d",
+                        "surface-container-highest": "#d9e4ea",
+                        "outline": "#717c82",
+                        "surface-container-high": "#e1e9ee",
+                        "outline-variant": "#a9b4b9",
+                        "on-tertiary-fixed-variant": "#585e65",
+                        "inverse-surface": "#0b0f10",
+                        "error-dim": "#4e0309",
+                        "on-error": "#fff7f6",
+                        "surface-variant": "#d9e4ea",
+                        "surface-bright": "#f7f9fb",
+                        "primary-dim": "#005c5c",
+                        "on-secondary-fixed": "#354052",
+                        "on-background": "#2a3439",
+                        "error-container": "#fe8983",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#8cf3f3",
+                        "secondary": "#546073",
+                        "surface-container": "#e8eff3",
+                        "background": "#f7f9fb",
+                        "primary-container": "#8cf3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#752121",
+                        "primary-fixed-dim": "#7ee5e4",
+                        "primary": "#006a6a",
+                        "surface-tint": "#006a6a",
+                        "secondary-dim": "#495467",
+                        "on-primary-fixed": "#004747",
+                        "secondary-container": "#d8e3fa",
+                        "tertiary": "#596066",
+                        "on-primary": "#d9fffe",
+                        "inverse-on-surface": "#9a9d9f",
+                        "secondary-fixed": "#d8e3fa",
+                        "tertiary-dim": "#4d545a",
+                        "on-surface-variant": "#566166",
+                        "on-primary-fixed-variant": "#006666",
+                        "inverse-primary": "#98fffe",
+                        "tertiary-fixed": "#e0e6ee",
+                        "surface-container-low": "#f0f4f7",
+                        "on-tertiary": "#f6f9ff",
+                        "on-secondary": "#f8f8ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-gradient {
+            background: linear-gradient(145deg, #006a6a 0%, #005c5c 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto font-['Manrope'] tracking-tight">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">TALENTX</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors duration-300" href="#">Internships</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors duration-300" href="#">Jobs</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors duration-300" href="#">AI Copilot</a>
+<a class="text-cyan-700 dark:text-cyan-400 font-bold border-b-2 border-cyan-700" href="#">Skill Leaders</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all" data-icon="post_add">post_add</button>
+<div class="h-6 w-px bg-outline-variant/30 mx-2"></div>
+<button class="px-5 py-2 text-slate-600 dark:text-slate-400 font-medium">Login</button>
+<button class="px-6 py-2.5 premium-gradient text-on-primary rounded-xl font-semibold shadow-lg shadow-primary/10 hover:scale-[0.98] transition-transform duration-300">Sign Up</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero & Stats Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
+<div class="lg:col-span-7">
+<span class="label-sm uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">The Digital Atelier</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter text-on-surface leading-[1.05] mb-8">
+                    Global talent <br/> rankings.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Discover top talent ranked by verified skills. Filter by location, skill, technology, or industry through our precision AI engine.
+                </p>
+</div>
+<div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Stat Cards -->
+<div class="surface-container-lowest glass-panel p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<p class="text-sm font-label uppercase tracking-widest text-secondary mb-2">Visible now</p>
+<p class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">5,240</p>
+</div>
+<div class="surface-container-lowest glass-panel p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<p class="text-sm font-label uppercase tracking-widest text-secondary mb-2">Top score</p>
+<p class="text-4xl font-headline font-extrabold text-primary tracking-tighter">2,450</p>
+</div>
+<div class="surface-container-lowest glass-panel p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<p class="text-sm font-label uppercase tracking-widest text-secondary mb-2">Top tier</p>
+<p class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">820</p>
+</div>
+</div>
+</section>
+<!-- Filters -->
+<section class="flex flex-wrap items-center gap-4 mb-16 p-4 surface-container-low rounded-2xl">
+<div class="flex items-center gap-3 px-4 py-2 surface-container-lowest rounded-xl border border-outline-variant/10">
+<span class="text-sm text-secondary font-medium">Rank by:</span>
+<span class="font-semibold text-on-surface flex items-center gap-2">Overall <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span></span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 surface-container-lowest rounded-xl border border-outline-variant/10">
+<span class="text-sm text-secondary font-medium">Location:</span>
+<span class="font-semibold text-on-surface flex items-center gap-2">Global <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span></span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 surface-container-lowest rounded-xl border border-outline-variant/10">
+<span class="text-sm text-secondary font-medium">Industry:</span>
+<span class="font-semibold text-on-surface flex items-center gap-2">All Sectors <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span></span>
+</div>
+<div class="ml-auto flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-secondary hover:text-primary transition-colors" data-icon="search">search</button>
+<button class="material-symbols-outlined p-2 text-secondary hover:text-primary transition-colors" data-icon="tune">tune</button>
+</div>
+</section>
+<!-- Spotlight Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32 items-center">
+<!-- Rank #2 -->
+<div class="surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/5 order-2 lg:order-1 hover:translate-y-[-4px] transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="professional portrait of Sarah Chen, a confident female tech leader in a minimalist office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrpm34hx9i1NBp2hO1xpMffPIamo9uUW_t05RLT7Xg8MlQlrqkOnE0JVHuEVkTWCPVDqtlo7C6-oCBnpmahBqTDCOLEmQJPTdLMV0EmUWukiccHZXp2HBZYYY_tjqYzrsyZjzkvbHadANiCn3HoWqmLSyXEqC8UAPx2sBURRBAfKKfdBF2hOL8YtVUwKcJJjl_13BfOfA6kRTW9IGxAWJFe2jzRkZ6ORoNgx-rgaiF6SrnQTrjfM23YANWlDbmEjU7KNw_rHkT_rAr"/>
+</div>
+<div class="bg-surface-container text-on-surface-variant font-bold px-3 py-1 rounded-full text-xs tracking-tighter">#2 RANK</div>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-1">Sarah Chen</h3>
+<p class="text-on-surface-variant mb-4">Frontend Lead, London</p>
+<div class="flex items-center gap-2 mb-6">
+<span class="text-primary font-black text-2xl">96%</span>
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Match Score</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">React</span>
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">AWS</span>
+</div>
+</div>
+<!-- Rank #1 - Featured -->
+<div class="relative order-1 lg:order-2 group">
+<div class="absolute -inset-1 bg-primary/20 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="relative surface-container-lowest p-12 rounded-[2.5rem] shadow-xl border border-primary/20 ring-1 ring-primary/5 scale-110 z-10">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 premium-gradient text-on-primary rounded-full font-bold text-sm shadow-xl shadow-primary/20">GLOBAL LEADER</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 mb-8 p-1">
+<div class="w-full h-full rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of Alex Rivera, a professional product manager looking directly at camera with modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3LZNvqFvSIu6UewqgpXvnerqMgQSD7WH5xsnB0unRHrNa4-YJGNYDwF4Uka3J0IBgzy3BEAFqMrYvN2ExVaiBmKVdgF9bucIzuYJcSTvyDJRqpSLl29IRCdZX7c5ZiQ0OXz64I0vVwxjTVjOQDyOtC7Hrq61wZkcZoYsAiPfzks4Il8QPpNquLxrP8ADmXK4CHRqmc0gAAAfk5uQfbw4rZl9ay0Q7wKUDagywdAexBmxs8ZgyHSMejbmZ0ge8br2LVdWm_5Y31keh"/>
+</div>
+</div>
+<h3 class="text-4xl font-headline font-extrabold text-on-surface mb-2 tracking-tight">Alex Rivera</h3>
+<p class="text-lg text-on-surface-variant font-medium mb-6">Product Manager, New York</p>
+<div class="flex items-center gap-3 mb-8">
+<span class="text-primary font-black text-5xl tracking-tighter">98%</span>
+<div class="text-left">
+<p class="text-xs uppercase tracking-[0.2em] text-secondary font-black leading-tight">Mastery</p>
+<p class="text-xs text-on-surface-variant">Verified Index</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-sm font-bold rounded-full border border-primary/10">Strategic Planning</span>
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-sm font-bold rounded-full border border-primary/10">Figma</span>
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-sm font-bold rounded-full border border-primary/10">Agile</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank #3 -->
+<div class="surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/5 order-3 hover:translate-y-[-4px] transition-all duration-500">
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="portrait of Marcus Thorne, an AI architect with a visionary look in a bright minimalist office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGuE8ruI1tCcHPBMJ7cTLGk7XN3MG-WwJtik-oqwSpDayw0wMCdH-7PnAgoGjYRp46IXFvfIDL_sICQq992QMXmft6xJo_pM0iV2op93PbpE4w3Qb0RdQbhYtElQ-NWSD9nUZIkoHm6Si4yTI60Jct4dB7RiucmnaUVZMk94iQavLVNOP6CIXg8gf79kivH29JFOZYYTRePuP_QLE6XUQs8pd2giONPiFj0LwlPLmUdDfG7vfs6gDMhQEKByzjXtucVfB8iLuHO2zC"/>
+</div>
+<div class="bg-surface-container text-on-surface-variant font-bold px-3 py-1 rounded-full text-xs tracking-tighter">#3 RANK</div>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-1">Marcus Thorne</h3>
+<p class="text-on-surface-variant mb-4">AI Architect, Berlin</p>
+<div class="flex items-center gap-2 mb-6">
+<span class="text-primary font-black text-2xl">94%</span>
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Match Score</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">PyTorch</span>
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">Neural Networks</span>
+<span class="px-3 py-1 bg-surface-container-low text-xs font-semibold rounded-full text-secondary">C++</span>
+</div>
+</div>
+</section>
+<!-- Rankings List -->
+<section class="mb-32">
+<div class="flex justify-between items-end mb-8 px-4">
+<div>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface">Global Leaderboard</h2>
+<p class="text-on-surface-variant">Continuous performance tracking across 40+ skill domains.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">View All Talent <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="space-y-3">
+<!-- Header Row (Visual Only) -->
+<div class="grid grid-cols-12 px-8 py-3 text-xs uppercase tracking-widest font-black text-secondary/60">
+<div class="col-span-1">Rank</div>
+<div class="col-span-5">Candidate</div>
+<div class="col-span-4 text-center">Verified Skills</div>
+<div class="col-span-2 text-right">Performance Score</div>
+</div>
+<!-- Rank #4 -->
+<div class="grid grid-cols-12 items-center px-8 py-5 surface-container-lowest rounded-2xl border border-outline-variant/10 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-pointer group">
+<div class="col-span-1 font-headline font-bold text-2xl text-secondary/40 group-hover:text-primary transition-colors">04</div>
+<div class="col-span-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="professional profile of a female ux researcher smiling softly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA30QmGlcsVkijHSU-fN-8Yp5c3bU251ovoNGtoZTugnQJ9lxUN2i1pJQDdDFL9JdHyA7Hvm3FZG-YE2GC4BuZNd1-HWCWS2L2Gak65MfHpabxEAO5HNOBx184k6-1QA7uujhtZHTXEirfF36UKPeaULcunjkkHlJIRmOnF9RHTD9lC4Vi5Inarj8azmtbVoSoeRNCO4vOBosW2GRtXh1atLcyJ883YD-UeFVstbd_HJFnPuFCT9xw33LJQjekPGgPObUR73LRgTK1F"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Elena Sokolova</p>
+<p class="text-sm text-on-surface-variant">UX Researcher • Paris</p>
+</div>
+</div>
+<div class="col-span-4 flex justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">User Flows (92%)</span>
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Python (88%)</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-headline font-extrabold text-on-surface text-xl">2,310</span>
+</div>
+</div>
+<!-- Rank #5 -->
+<div class="grid grid-cols-12 items-center px-8 py-5 surface-container-lowest rounded-2xl border border-outline-variant/10 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-pointer group">
+<div class="col-span-1 font-headline font-bold text-2xl text-secondary/40 group-hover:text-primary transition-colors">05</div>
+<div class="col-span-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="portrait of a male systems engineer with a tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmOQTVoFGIildxJyGcSHAv7S4UsfCJlGd26WwE9uIW_TUj7dNEmYZwKpipGQv8Pc0NsIeaKvLWHLFW7_8hA6J_DqLWDaZ1f-1G2SgnvMXHkvpxbtthbPQvvxkIKh3K0mRyAbACQJZkqiWcQEa5jaSs26ULlkHkYyr_Nh3xysivbqP8eryitNBWrQLZha0A0TsK4YaUYR9FvA3A31aW6dtSTObeQSS0n8VB6uPizsNlTnqUJ4xcHujqMqTDm6oNf6P5q3WJkZN7fnCC"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">David Park</p>
+<p class="text-sm text-on-surface-variant">Systems Engineer • Seoul</p>
+</div>
+</div>
+<div class="col-span-4 flex justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Rust (95%)</span>
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Docker (90%)</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-headline font-extrabold text-on-surface text-xl">2,285</span>
+</div>
+</div>
+<!-- Rank #6 -->
+<div class="grid grid-cols-12 items-center px-8 py-5 surface-container-lowest rounded-2xl border border-outline-variant/10 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-pointer group">
+<div class="col-span-1 font-headline font-bold text-2xl text-secondary/40 group-hover:text-primary transition-colors">06</div>
+<div class="col-span-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a marketing director with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCh_k5IEHowmoNg4lj1fEAKWZrjXtaIwiuOdVQrkIf4gMxpw777Ev3gmWCCyf3N-7NPftncLcQVGB0LOb49ZmiWstZQMSKjcsd93C48rG7-LxfqxyH105OKZ6TYzUcHR_KuZfsJuCrr20C_whBmSMO-5kSGn-o_yf89MAfWslpHV3z2M8ZHEKnujxQG-EJUVJiGJMn9jOGrjHX1LjsCNfw076kt30_RXsN1tMUxHwIQRE87Prt3C06NrCwPRhSI1qXLb6b4MQXgGcl"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Amara Okafor</p>
+<p class="text-sm text-on-surface-variant">Growth Lead • Lagos</p>
+</div>
+</div>
+<div class="col-span-4 flex justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Data Analytics (91%)</span>
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">SEO (94%)</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-headline font-extrabold text-on-surface text-xl">2,250</span>
+</div>
+</div>
+<!-- Rank #7 -->
+<div class="grid grid-cols-12 items-center px-8 py-5 surface-container-lowest rounded-2xl border border-outline-variant/10 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-pointer group">
+<div class="col-span-1 font-headline font-bold text-2xl text-secondary/40 group-hover:text-primary transition-colors">07</div>
+<div class="col-span-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="male devops specialist with a clean corporate headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGB84iuCBJcpryxaXXK5Rb2Mgs6Mp277uMWjiO3wRYr-dFZYSCiTY5_Q4b4zQmhRWU51kGreP-8v2GigRwHAg5TsBfAHR3TGQGIHiGzrwSnvuUPatzuZzfdfMu3i69J-ptNldGNeS7X-lNmNhV3UXAjiD_tP2dSQGOJxWEtMurjj0w6j-0-FAmHMmdFqwijIk10IuQ_5TeUxAKyUZsTWoXWeB5f1krlUtjhRMDHDQaV0lxGFQmlueTVwz_knYnTDZo_00a9nA37lUV"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">James Wilson</p>
+<p class="text-sm text-on-surface-variant">DevOps Architect • Seattle</p>
+</div>
+</div>
+<div class="col-span-4 flex justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Kubernetes (89%)</span>
+<span class="px-3 py-1 bg-surface-container-low text-[10px] font-black uppercase rounded-md text-secondary">Terraform (92%)</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-headline font-extrabold text-on-surface text-xl">2,190</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200/20 bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="col-span-1">
+<span class="text-lg font-bold text-slate-900 dark:text-white mb-6 block">TALENTX</span>
+<p class="text-slate-500 dark:text-slate-500 leading-relaxed mb-6">
+                    © 2024 TalentX Global. The Digital Atelier for Talent.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-2">Platform</h4>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-700 underline transition-all" href="#">Rankings</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-700 underline transition-all" href="#">Methodology</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-2">Legal</h4>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-700 underline transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-700 underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-2">Connect</h4>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-700 underline transition-all" href="#">Contact Support</a>
+<div class="flex gap-4 mt-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-cyan-600 transition-colors" data-icon="language">language</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-cyan-600 transition-colors" data-icon="hub">hub</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

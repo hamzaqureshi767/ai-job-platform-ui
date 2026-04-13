@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HireVision AI | The Digital Atelier for Talent</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-dim": "#4e0309",
+                        "outline-variant": "#a9b4b9",
+                        "primary": "#006a6a",
+                        "primary-fixed": "#8cf3f3",
+                        "tertiary-dim": "#4d545a",
+                        "primary-dim": "#005c5c",
+                        "error-container": "#fe8983",
+                        "on-tertiary": "#f6f9ff",
+                        "surface-container-high": "#e1e9ee",
+                        "on-secondary-fixed-variant": "#515c6f",
+                        "on-primary": "#d9fffe",
+                        "on-secondary-fixed": "#354052",
+                        "inverse-primary": "#98fffe",
+                        "on-tertiary-container": "#4e545b",
+                        "tertiary": "#596066",
+                        "primary-fixed-dim": "#7ee5e4",
+                        "on-primary-fixed-variant": "#006666",
+                        "on-secondary-container": "#475265",
+                        "secondary-container": "#d8e3fa",
+                        "on-error-container": "#752121",
+                        "primary-container": "#8cf3f3",
+                        "secondary-dim": "#495467",
+                        "secondary": "#546073",
+                        "secondary-fixed-dim": "#cad5ec",
+                        "inverse-on-surface": "#9a9d9f",
+                        "tertiary-container": "#e0e6ee",
+                        "on-secondary": "#f8f8ff",
+                        "on-primary-fixed": "#004747",
+                        "secondary-fixed": "#d8e3fa",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#e0e6ee",
+                        "inverse-surface": "#0b0f10",
+                        "on-error": "#fff7f6",
+                        "surface-container": "#e8eff3",
+                        "surface-bright": "#f7f9fb",
+                        "surface-variant": "#d9e4ea",
+                        "surface-dim": "#cfdce3",
+                        "on-background": "#2a3439",
+                        "surface-tint": "#006a6a",
+                        "tertiary-fixed-dim": "#d2d8e0",
+                        "outline": "#717c82",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#566166",
+                        "error": "#9f403d",
+                        "surface-container-highest": "#d9e4ea",
+                        "on-tertiary-fixed": "#3b4248",
+                        "on-tertiary-fixed-variant": "#585e65",
+                        "surface-container-low": "#f0f4f7",
+                        "on-surface": "#2a3439",
+                        "on-primary-container": "#005c5c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(32px);
+        }
+        .cta-gradient {
+            background: linear-gradient(145deg, #006a6a 0%, #005c5c 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-black text-slate-900 tracking-tighter">HireVision AI</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-slate-900 transition-colors duration-300 font-manrope tracking-tight text-sm font-semibold" href="#">Internships</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors duration-300 font-manrope tracking-tight text-sm font-semibold" href="#">Jobs</a>
+<a class="text-cyan-700 font-bold border-b-2 border-cyan-700 pb-1 font-manrope tracking-tight text-sm" href="#">AI Copilot</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors duration-300 font-manrope tracking-tight text-sm font-semibold" href="#">Skill Leaders</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-slate-600 font-semibold text-sm px-4 py-2 hover:opacity-80 transition-all">Login</button>
+<button class="cta-gradient text-on-primary px-6 py-2.5 rounded-xl text-sm font-bold shadow-md hover:scale-[0.98] transition-transform">Sign Up</button>
+<span class="material-symbols-outlined text-slate-600 cursor-pointer">post_add</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-40 pb-24 px-8 max-w-7xl mx-auto text-center relative">
+<div class="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
+<h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
+            Search jobs, match and <br/><span class="text-primary">prove your skills</span> in one place
+        </h1>
+<!-- Capability Shortcuts -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">search</span> Search jobs
+            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span> Digital resume
+            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span> Auto apply
+            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span> Internships
+            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span> Certifications
+            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest rounded-full shadow-sm hover:shadow-md transition-shadow text-sm font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span> Learning
+            </button>
+</div>
+<!-- Central Search Module -->
+<div class="max-w-4xl mx-auto glass-panel p-2 rounded-2xl shadow-xl border border-white/50 flex flex-col md:flex-row gap-2">
+<div class="flex-1 flex items-center px-4 py-3 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-slate-400 mr-3">work</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-slate-400" placeholder="Job title, role, company, or skill" type="text"/>
+</div>
+<div class="flex-1 flex items-center px-4 py-3 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-slate-400 mr-3">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-slate-400" placeholder="City, state, or country" type="text"/>
+</div>
+<button class="cta-gradient text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-[0.98] transition-transform shadow-lg">
+<span class="material-symbols-outlined">search</span> Search
+            </button>
+</div>
+<p class="mt-8 text-slate-500 font-medium">
+<span class="text-primary font-semibold">Upload your resume</span> — get noticed by top employers and companies hiring now
+        </p>
+</header>
+<!-- Core Capabilities Grid -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">travel_explore</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Search jobs</h3>
+<p class="text-slate-500 leading-relaxed">Advanced AI matching that understands your context, not just keywords.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">account_circle</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Digital resume</h3>
+<p class="text-slate-500 leading-relaxed">A live, interactive portfolio that proves your expertise through data.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Internships</h3>
+<p class="text-slate-500 leading-relaxed">Dedicated pathways for early-career talent at global innovation hubs.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">business</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Hiring? Sign up</h3>
+<p class="text-slate-500 leading-relaxed">Reduce time-to-hire by 60% with pre-vetted AI skills verification.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">smart_toy</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Copilot</h3>
+<p class="text-slate-500 leading-relaxed">Your personal AI career coach helping you prep for every interview.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl hover:scale-[1.02] transition-all cursor-pointer group shadow-sm border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">new_releases</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Skill checks &amp; badges</h3>
+<p class="text-slate-500 leading-relaxed">Standardized assessments to verify and showcase your hard skills.</p>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="bg-surface-container-low py-16 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<p class="text-sm font-bold tracking-[0.2em] text-secondary/60 uppercase mb-10">Trusted by teams who hire smarter</p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale">
+<img alt="" class="h-8" data-alt="minimalist clean stripe logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCGiZ7hQ0FTcJaFI1lqcV5B8F6ryNjlsvEFyRP413JqSrrreucRNNhN0hIEjtbkZSG-F_gLQEDcBLRCYVZQIbHbOGal8Ch-2rwtzoDehzSrQnlWo4WoY23ShNErfIHQYRsY5GyDh8Zyt3gW5uJLoFSmm9fLxK8V1W7i-mMbKEVd63xSzDYXUeCTf8FcrNPl8ZSuC_Sb3EcxTqok7EL4lmb-1pDi4Gnm7ki3TiS-BLaVvQJb-3rTX7M51QhI2AaWUq-CR2Ur4ECdgK"/>
+<img alt="" class="h-8" data-alt="minimalist clean airbnb logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQiH4r6qCOuSSwi4vBcuMgqVR_QWk19vVQLMuHaCl1z6WjD8xxXUWjHSCEG3w1a6nybEoM0Qpvphw1pgtWzbnB_hx-0hH_PTL_XfcvTx6avnpABIGWYsujhBRQKpH-vJDQ0m_OjkHbct4TB1xDBU4MQ7vW06XRSp8ht3NdVpqXl0vDs6Ji1lifEFZtPHlLPO1z4rM0uCb1PVeo6aNdWfd1HpHHYoanIWDgay3Kv3ydq4fLLpWxitf_bQy0rvFpYrGBrxtUvyAARcSA"/>
+<img alt="" class="h-8" data-alt="minimalist clean notion logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEnJd7nb9diKda6I4HrqQjVACLTD9b8nZ6svVcypQ25rF0EHFlMspvFuZRrh9rBuVsGy-FnTPKnDZpOPeNP9arxn9ErQ9kzn2pE-6ci9G_1VJH8rPOl9Z7507ZCILPpkuROVcuu6dOGsuv4x3bEZXsw7G60sdr-jlOW0aV0RyNT8U8_PbTkI7iW8dFk-zi94Dkqv6Xy37G0Pwfl2CRK8--HKFgWFgyv9gmZj6G53ESSumaMAam1zvTigxsYeQCLvtmmYcBDgHCamTy"/>
+<img alt="" class="h-8" data-alt="minimalist clean revolut logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaz7tLMdlTlL5MVEjkcvT6UPd0HQ7T_JNJXLiKNY7KY_OZ7MJXUldp9BCw2TiXQRgEZsmYAZFdczZsTnkKUYcvwG8CB4nuxx4G4BTRcIuPjxW8dn3m-O1h8rHRghS9jxP-R4FVAvEHHHRBvYkaAGrQCHd44p43Gwb4TWREtADrprwXgXeE4ZPFRShckGCxGDEV_gcIOarBCEH4fpsFXuwrBfDVMJ_0ZbxNj4zNNKQxn5u_6WS-EAGflt4rEfJRymfGqsm2tAa_ok8F"/>
+<img alt="" class="h-8" data-alt="minimalist clean figma logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWSzl1YLoQIidftoll_EMFQ1WkbHsvBLS3d_yod_jCNpzNzlqutDac4HgJvrv18_wcstB1Bsg0WWsfOVIDoAN-83WPZEstSdkCruyvNc1i9beqjhlrXZX1JjWrIuJ3XPlxtrIDVjmYZts9-HjT4lUcybNH-gL4QA2HfdBoJDtXCMr2fdO5UwSBaj2lMPDNLGwRPKxTqLDGTxx4YN76H0LubWStljVmYlYgF3Lu7WgsDIy4lmEzVg98Wp3wqXM6CBC3bOa5-eBm8lE1"/>
+<img alt="" class="h-8" data-alt="minimalist clean slack logo monochrome black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAskO2LtbFQup_DfsBBz0UoBGqlytSEgChGZ03sMPe2_QISUebD0JyU7lHN2C0ybZMAkq-tM0hHjvFBXIgQo_y35QYn5H43QczBLtH22LJXVXVDSSjsgbBRx5a5p2CIomLJWkfLvyQblAMLbwrBWMbvsqZmnPSqSYZfKksra-2zNKF8XbOLn_dkQ9-aC8-yOqyin4gCfLNauVg7GsrHgR7lGJhDTIS6F3vPlptZnk2sWW9qk0DE8h3pDOOmdpXz1QHEzhywQoeOQ8H"/>
+</div>
+</div>
+</section>
+<!-- Recent Job Openings -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="mb-16">
+<h2 class="text-4xl font-extrabold mb-4 tracking-tight">Recent Job Openings</h2>
+<p class="text-slate-500 max-w-2xl">Discover opportunities from the world's leading technology companies and startups.</p>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<div class="flex-1 min-w-[200px] relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl focus:border-primary/50 focus:ring-0" placeholder="Keywords" type="text"/>
+</div>
+<select class="px-6 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl text-slate-600 focus:border-primary/50 focus:ring-0">
+<option>Industry</option>
+</select>
+<select class="px-6 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl text-slate-600 focus:border-primary/50 focus:ring-0">
+<option>Employment type</option>
+</select>
+<select class="px-6 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl text-slate-600 focus:border-primary/50 focus:ring-0">
+<option>Workplace</option>
+</select>
+<button class="cta-gradient text-white px-8 py-3 rounded-xl font-bold shadow-md">Apply filters</button>
+</div>
+<!-- Job Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl flex items-start gap-6 border border-transparent hover:border-primary/10 hover:shadow-lg transition-all group">
+<div class="w-16 h-16 bg-slate-100 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="" class="w-full h-full object-cover" data-alt="abstract tech company logo geometric minimal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXyAad7UTqkBNvS1tdKq9twEmTM-qynSg7ljegujTDq1JgcmJ-0-gHp7sLH01VNEvRXzqxjWKZYYFoJKSfB6OkWmbAFrM8bZM75ap2-YRx5hekbBMgF6VgUw2uqN22agnGJ_GhwoBPWK5wjLe0ETr1ZNH_v463arHTDGYPPVQALuWFsM7Ka0oZaOJWJXvNg6D9wWwIa2DCSQKjr75UOwmL1OJJn9r8vQ7awascDNe3ivS_DZhwv9bWnVeZzMWV1lbJK79ySfFlwT5T"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-primary mb-1">Stripe</p>
+<h4 class="text-xl font-bold group-hover:text-primary transition-colors">Senior Product Designer</h4>
+</div>
+<span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">2d ago</span>
+</div>
+<div class="flex gap-4 mt-4 text-sm text-slate-500 font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Remote</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> Full-time</span>
+</div>
+</div>
+<button class="self-center bg-surface-container-low px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all">Details</button>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl flex items-start gap-6 border border-transparent hover:border-primary/10 hover:shadow-lg transition-all group">
+<div class="w-16 h-16 bg-slate-100 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="" class="w-full h-full object-cover" data-alt="modern corporate brand logo symbol minimalist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiVaf3yDDSCOELV5Ey2AUotRBd0mcIMstLHngO_hZ05ajdZzuRmRnHTK0C_lINUZK6sGrXZMQ_xX9MljMTkVxyKX8JihKBONprYLKMoLVlX9HVOEaZz3ikCVtG2H8PXCYIeVX0Vgjflk6BdHLRI6gnpdB0b2RF-QT8zzCwY8vFr29wMDLXzl2yDNVaBRg6cic2ozUsTUqVnOukm5wW6Nx4cdp9HGJIPJ4TRciJ_Tb0jQCUOacsjtZR5T5iRKfuWDXfTlTdWikfcrpF"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-primary mb-1">Anthropic</p>
+<h4 class="text-xl font-bold group-hover:text-primary transition-colors">AI Research Engineer</h4>
+</div>
+<span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">5h ago</span>
+</div>
+<div class="flex gap-4 mt-4 text-sm text-slate-500 font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> San Francisco</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> Hybrid</span>
+</div>
+</div>
+<button class="self-center bg-surface-container-low px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all">Details</button>
+</div>
+</div>
+<div class="text-center">
+<button class="px-10 py-4 bg-surface-container border border-outline-variant/30 rounded-2xl font-bold text-slate-700 hover:bg-surface-container-high transition-colors">View all jobs</button>
+</div>
+</section>
+<!-- Top Industries -->
+<section class="max-w-7xl mx-auto px-8 pb-32">
+<div class="flex flex-wrap items-center gap-4">
+<p class="text-sm font-bold text-secondary tracking-widest mr-4 uppercase">Top Industries:</p>
+<button class="flex items-center gap-2 px-6 py-3 bg-white border border-primary/20 rounded-full text-sm font-bold text-primary shadow-sm">
+                Technology &amp; Digital <span class="bg-primary/10 px-2 py-0.5 rounded text-[10px]">1,240</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 bg-white border border-outline-variant/20 rounded-full text-sm font-medium text-slate-600 hover:border-primary/20 hover:text-primary transition-colors">
+                Real Estate &amp; Property <span class="bg-slate-100 px-2 py-0.5 rounded text-[10px]">840</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 bg-white border border-outline-variant/20 rounded-full text-sm font-medium text-slate-600 hover:border-primary/20 hover:text-primary transition-colors">
+                Healthcare &amp; Medical <span class="bg-slate-100 px-2 py-0.5 rounded text-[10px]">2,150</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 bg-white border border-outline-variant/20 rounded-full text-sm font-medium text-slate-600 hover:border-primary/20 hover:text-primary transition-colors">
+                Sales &amp; Marketing <span class="bg-slate-100 px-2 py-0.5 rounded text-[10px]">1,100</span>
+</button>
+</div>
+</section>
+<!-- Featured Internship Campaign -->
+<section class="max-w-7xl mx-auto px-8 py-24 bg-primary/[0.03] rounded-3xl mb-32 overflow-hidden relative">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-primary/5 skew-x-[-15deg] translate-x-24"></div>
+<div class="flex flex-col lg:flex-row gap-16 relative z-10">
+<div class="flex-1">
+<div class="flex gap-3 mb-6">
+<span class="px-4 py-1.5 bg-primary text-white text-[10px] font-black tracking-widest uppercase rounded-full">Featured campaign</span>
+<span class="px-4 py-1.5 bg-white border border-primary/20 text-primary text-[10px] font-black tracking-widest uppercase rounded-full">Internship-only feed</span>
+</div>
+<h2 class="text-5xl font-black mb-6 tracking-tighter leading-tight">Summer Internship <br/>Program 2026</h2>
+<p class="text-lg text-primary-dim font-bold mb-4">Launch your career with AI-matched opportunities at world-class firms.</p>
+<p class="text-slate-500 leading-relaxed mb-8 max-w-lg">Access an exclusive ecosystem of pre-verified summer roles designed for rapid skill acquisition. Our platform ensures your potential is seen by decision-makers directly.</p>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg text-xs font-bold text-slate-600 shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-green-600">payments</span> Paid
+                    </span>
+<span class="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg text-xs font-bold text-slate-600 shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-blue-600">verified</span> Verified
+                    </span>
+<span class="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg text-xs font-bold text-slate-600 shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-orange-600">person</span> Beginner friendly
+                    </span>
+<span class="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg text-xs font-bold text-slate-600 shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-primary">auto_awesome</span> AI-matched
+                    </span>
+</div>
+<div class="flex gap-4">
+<button class="cta-gradient text-white px-8 py-4 rounded-xl font-bold shadow-lg">Explore internships</button>
+<button class="bg-white border border-outline-variant/30 text-slate-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors">Create your profile</button>
+</div>
+</div>
+<div class="lg:w-[450px]">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span> Live internships
+                </h3>
+<div class="space-y-4">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow cursor-pointer">
+<h4 class="font-bold text-lg">UX Research Intern</h4>
+<p class="text-sm text-slate-500 font-medium mb-3">Google • London, UK</p>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded">DESIGN</span>
+<span class="text-[10px] font-bold text-slate-400">1h ago</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow cursor-pointer">
+<h4 class="font-bold text-lg">FinTech Strategy Associate</h4>
+<p class="text-sm text-slate-500 font-medium mb-3">Goldman Sachs • New York</p>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded">FINANCE</span>
+<span class="text-[10px] font-bold text-slate-400">4h ago</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow cursor-pointer">
+<h4 class="font-bold text-lg">Backend Engineering</h4>
+<p class="text-sm text-slate-500 font-medium mb-3">Discord • Remote</p>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded">ENGINEERING</span>
+<span class="text-[10px] font-bold text-slate-400">Yesterday</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Architecture Grid -->
+<section class="max-w-7xl mx-auto px-8 py-24 text-center">
+<h2 class="text-4xl font-extrabold mb-16 tracking-tight">Everything in one platform</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-20">
+<!-- 18 Small Feature Cards -->
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">radar</span>
+<span class="text-xs font-bold">Nearby &amp; radar</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-xs font-bold">Real-time alerts</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="text-xs font-bold">Market insights</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">chat</span>
+<span class="text-xs font-bold">Direct messaging</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-xs font-bold">CV Analysis</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<span class="text-xs font-bold">Mock interviews</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">savings</span>
+<span class="text-xs font-bold">Salary matching</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">diversity_3</span>
+<span class="text-xs font-bold">Team culture fit</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+<span class="text-xs font-bold">Auto-references</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">stars</span>
+<span class="text-xs font-bold">Priority listing</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">shield_person</span>
+<span class="text-xs font-bold">Identity verify</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">share</span>
+<span class="text-xs font-bold">Quick referrals</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<span class="text-xs font-bold">Smart scheduler</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">payments</span>
+<span class="text-xs font-bold">Contract automation</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span class="text-xs font-bold">Candidate pools</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">speed</span>
+<span class="text-xs font-bold">Fast-track hiring</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">task_alt</span>
+<span class="text-xs font-bold">Skill ranking</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 hover:border-primary/20 transition-all flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary">touch_app</span>
+<span class="text-xs font-bold">Single-click reach</span>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="cta-gradient text-white px-10 py-4 rounded-xl font-bold shadow-lg">Create your profile</button>
+<button class="bg-surface-container-low text-slate-700 px-10 py-4 rounded-xl font-bold border border-outline-variant/20">Start hiring</button>
+<button class="text-primary font-bold px-8 py-4">View all features</button>
+</div>
+</section>
+<!-- How It Works -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-4xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Step by step</span>
+<h2 class="text-4xl font-extrabold tracking-tight">How HireVision works</h2>
+<div class="mt-10 inline-flex bg-surface-container-lowest p-1 rounded-2xl shadow-sm border border-outline-variant/20">
+<button class="px-8 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-md">For candidates</button>
+<button class="px-8 py-2.5 rounded-xl text-slate-500 font-bold text-sm hover:text-slate-800 transition-colors">For companies</button>
+</div>
+</div>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-slate-200/50 hidden md:block"></div>
+<!-- Steps -->
+<div class="space-y-24 relative">
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 md:text-right">
+<h3 class="text-2xl font-bold mb-2">Create profile</h3>
+<p class="text-slate-500">Sign up in seconds and import your existing professional data.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center z-10 shadow-md">
+<span class="text-primary font-black">1</span>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+<div class="flex-1 md:text-left">
+<h3 class="text-2xl font-bold mb-2">Add CV</h3>
+<p class="text-slate-500">Upload your PDF or LinkedIn profile. Our AI extracts the nuances of your experience.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center z-10 shadow-md">
+<span class="text-primary font-black">2</span>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 md:text-right">
+<h3 class="text-2xl font-bold mb-2">Set preferences</h3>
+<p class="text-slate-500">Tell us what you actually want: salary range, hybrid models, and tech stack.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center z-10 shadow-md">
+<span class="text-primary font-black">3</span>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+<div class="flex-1 md:text-left">
+<h3 class="text-2xl font-bold mb-2">Discover roles</h3>
+<p class="text-slate-500">Receive curated matches daily. Only see jobs that fit your profile 90%+.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-white border-4 border-primary/20 flex items-center justify-center z-10 shadow-md">
+<span class="text-primary font-black">4</span>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-slate-50">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div>
+<div class="text-xl font-bold text-slate-900 mb-6">HireVision AI</div>
+<p class="text-sm text-slate-500 leading-relaxed">Defining the future of talent acquisition through ethical AI and skill-first matching.</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm">Product</h4>
+<div class="flex flex-col gap-4">
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Internships</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Jobs</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">AI Copilot</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Skill Leaders</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm">Company</h4>
+<div class="flex flex-col gap-4">
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">About Us</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Careers</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Press</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm">Legal</h4>
+<div class="flex flex-col gap-4">
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 hover:text-cyan-600 transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pt-10 border-t border-slate-200">
+<p class="text-sm text-slate-500 text-center font-inter">© 2024 HireVision AI. The Digital Atelier for Talent.</p>
+</div>
+</footer>
+</body></html>
